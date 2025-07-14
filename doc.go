@@ -1,7 +1,7 @@
 /*
 Package luar provides a convenient interface between Lua and Go.
 
-It uses Alessandro Arzilli's golua (https://github.com/aarzilli/golua).
+It uses Alessandro Arzilli's golua (https://github.com/hhq163/golua).
 
 Most Go values can be passed to Lua: basic types, strings, complex numbers,
 user-defined types, pointers, composite types, functions, channels, etc.
@@ -38,8 +38,7 @@ rules are as follows:
 - If the types are different and not Lua numbers, convert to a complex proxy, a
 Lua number, or a Lua string according to the result kind.
 
-
-Channels
+# Channels
 
 Channel proxies can be manipulated with the following methods:
 
@@ -49,8 +48,7 @@ Channel proxies can be manipulated with the following methods:
 
 - send(x value): Send a value in the channel.
 
-
-Complex numbers
+# Complex numbers
 
 Complex proxies can be manipulated with the following attributes:
 
@@ -58,8 +56,7 @@ Complex proxies can be manipulated with the following attributes:
 
 - imag: The imaginary part.
 
-
-Slices
+# Slices
 
 Slice proxies can be manipulated with the following methods/attributes:
 
@@ -71,8 +68,7 @@ slice. The elements must be convertible to the slice element type.
 - slice(i, j integer) sliceProxy: Return the sub-slice that ranges from 'i' to 'j'
 excluded, starting from 1.
 
-
-Strings
+# Strings
 
 String proxies can be browsed rune by rune with the pairs/ipairs functions.
 These runes are encoded as strings in Lua.
@@ -84,6 +80,5 @@ String proxies can be manipulated with the following method:
 
 - slice(i, j integer) sliceProxy: Return the sub-string that ranges from 'i' to 'j'
 excluded, starting from 1.
-
 */
 package luar
