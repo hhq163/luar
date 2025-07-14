@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/aarzilli/golua/lua"
+	"github.com/hhq163/golua/lua"
 )
 
 // ConvError records a conversion error from value 'From' to value 'To'.
@@ -127,15 +127,15 @@ func (v *visitor) push(val reflect.Value) bool {
 //
 // It populates the 'luar' table with some helper functions/values:
 //
-//   method: ProxyMethod
-//   unproxify: Unproxify
+//	method: ProxyMethod
+//	unproxify: Unproxify
 //
-//   chan: MakeChan
-//   complex: MakeComplex
-//   map: MakeMap
-//   slice: MakeSlice
+//	chan: MakeChan
+//	complex: MakeComplex
+//	map: MakeMap
+//	slice: MakeSlice
 //
-//   null: Null
+//	null: Null
 //
 // It replaces the 'pairs'/'ipairs' functions with ProxyPairs/ProxyIpairs
 // respectively, so that __pairs/__ipairs can be used, Lua 5.2 style. It allows
@@ -924,7 +924,7 @@ func isNewType(t reflect.Type) bool {
 // - If table is non-nil, then create or reuse a global table of that name and
 // put the values in it.
 //
-// - If table is '' then put the values in the global table (_G).
+// - If table is ” then put the values in the global table (_G).
 //
 // - If table is '*' then assume that the table is already on the stack.
 //

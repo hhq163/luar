@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/aarzilli/golua/lua"
+	"github.com/hhq163/golua/lua"
 )
 
 func BenchmarkLuaToGoSliceInt(b *testing.B) {
